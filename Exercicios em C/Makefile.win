@@ -1,0 +1,28 @@
+# Project: Promoções
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = programas/Erro.o
+LINKOBJ  = programas/Erro.o
+LIBS     = -L"D:/Linguagem C/Dev-Cpp/MinGW64/lib" -L"D:/Linguagem C/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -mwindows -g3
+INCS     = -I"D:/Linguagem C/Dev-Cpp/MinGW64/include" -I"D:/Linguagem C/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Linguagem C/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/Linguagem C/Dev-Cpp/MinGW64/include" -I"D:/Linguagem C/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Linguagem C/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Linguagem C/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = Promoções.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+programas/Erro.o: programas/Erro.cpp
+	$(CPP) -c programas/Erro.cpp -o programas/Erro.o $(CXXFLAGS)

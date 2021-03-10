@@ -1,0 +1,22 @@
+// Criador: Rennan Emanoel
+//linkedin: www.linkedin.com/in/dev-rennan-emanoel
+//data: 10/10/2020
+//programa: utilizaçao da funcao do while
+
+
+#include <stdio.h>
+
+int main()
+{
+    
+    int opcao;
+    opcao = 1;
+    
+    do
+    {
+        printf("Digite uma opcao: 1) Sim 2)Nao: ");
+        scanf("%d",&opcao);
+        getchar();
+    
+    } while(opcao < 1 || opcao > 2);
+}

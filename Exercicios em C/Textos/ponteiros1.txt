@@ -1,0 +1,21 @@
+//criador: Renna Emanoel
+//data: 16/10/2020
+//programa: teste de cadeia de ponteiros
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()// função principal
+{
+    int var;                //declaraçãode variavel
+    int *p1;            //declaração de ponteiro 1
+    int **p2;             //declaração de ponteiro 2 
+    
+    var = 15;           // inicialização de variavel
+    p1 = &var;           // inicialização de ponteiro com o valor da variavel
+    p2 = &p1;            // declaração de ponteiro com valor do ponteiro 1
+    
+    printf("\n%d\n", **p2);     //exibi na tela o valor do ponteiro p2
+    
+    return 0;
+}
